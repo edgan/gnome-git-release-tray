@@ -5,6 +5,11 @@ sends GNOME desktop notifications when release titles or tags match a regex.
 Includes a settings window, StatusNotifier/AppIndicator tray menu, persistent
 notification history, and repeatable debug notifications.
 
+## Screenshots
+![Main window](./assets/screenshots/main-window.png)
+![Edit watch](./assets/screenshots/edit-watch.png)
+![Notification history](./assets/screenshots/notification-history.png)
+
 ## Build and run
 
 Install a current stable Rust toolchain and the native development packages:
