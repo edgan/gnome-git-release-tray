@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Git Release Tray
+Comment=Watch GitHub releases and receive filtered notifications
+Exec=gnome-git-release-tray
+Icon=io.github.gnome_git_release_tray
+Terminal=false
+Categories=Network;
+Keywords=GitHub;release;notification;tray;
+StartupNotify=true

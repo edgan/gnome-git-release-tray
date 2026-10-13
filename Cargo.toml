@@ -1,0 +1,32 @@
+[package]
+name = "gnome-git-release-tray"
+version = "0.1.0"
+edition = "2024"
+description = "GNOME tray notifications for GitHub releases"
+license = "MIT"
+
+[features]
+default = ["desktop"]
+desktop = ["dep:gtk", "dep:adw", "dep:ksni", "dep:notify-rust"]
+
+[dependencies]
+anyhow = "1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+fancy-regex = "0.19"
+url = "2"
+directories = "6"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+tokio = { version = "1", features = ["rt-multi-thread", "time", "sync"] }
+gtk = { package = "gtk4", version = "0.10", optional = true }
+adw = { package = "libadwaita", version = "0.8", optional = true }
+ksni = { version = "0.3", optional = true }
+notify-rust = { version = "4", default-features = false, features = ["z-with-tokio"], optional = true }
+
+[dev-dependencies]
+tempfile = "3"
+
+[[bin]]
+name = "gnome-git-release-tray"
+path = "src/main.rs"
+required-features = ["desktop"]
